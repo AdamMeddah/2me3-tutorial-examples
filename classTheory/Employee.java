@@ -12,12 +12,14 @@ class Employee {
    private String name;
    private double salary;
    private LocalDate hireDay;
+   private int hours;
 
-   public Employee(String n, double s, int year, int month, int day)
+   public Employee(String n, double s, int year, int month, int day, int hours)
    {
       name = n;
       salary = s;
       hireDay = LocalDate.of(year, month, day);
+      hours = this.hours;
    }
 
    public String getName()
@@ -30,6 +32,9 @@ class Employee {
       return salary;
    }
 
+   public int getHours(){
+      return hours;
+   }
    public LocalDate getHireDay()
    {
       return hireDay;
